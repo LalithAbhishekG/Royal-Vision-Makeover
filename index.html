@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="relative bg-gray-100 pt-16">
+    <!-- Navbar -->
+    <nav
+  class="RV Nav_list bg-red-950 text-white py-4 px-6 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50"
+>
+  <h1 class="text-2xl font-bold">LOGO</h1>
+  
+  <!-- Hamburger Menu Button (visible on mobile) -->
+  <button id="hamburger-button" class="lg:hidden focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  
+  <!-- Navigation Menu -->
+  <ul id="nav-menu" class="hidden lg:flex lg:space-x-6 flex-col lg:flex-row fixed lg:static top-16 left-0 right-0 bg-red-950 lg:bg-transparent p-4 lg:p-0 space-y-4 lg:space-y-0">
+    <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+    <li><a href="#" class="hover:text-yellow-400">About Us</a></li>
+    <li><a href="#" class="hover:text-yellow-400">Courses</a></li>
+    <li><a href="#" class="hover:text-yellow-400">Contact Us</a></li>
+    <li><a href="#" class="hover:text-yellow-400">Admissions</a></li>
+    <li>
+      <img
+        src="./svg/whatsapp.svg"
+        alt="whatsapp icon"
+        />     
+    </li>
+    <li>
+      <img
+        src="./svg/insta.svg"
+        alt="insta icon"
+        />      
+    </li>
+  </ul>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="relative">
+      <img
+        src="./img/Home BG.png"
+        alt="Hero Background"
+        class="w-full h-lg  object-cover"
+      />
+      
+ <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-row md:flex-row justify-center items-center text-center px-4 space-y-4">
+   
+    <div class="space-y-2">
+      <h1 class="text-4xl md:text-7xl lg:text-15xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-800 text-transparent bg-clip-text">ROYAL</h1>
+      <h1 class="text-4xl md:text-7xl lg:text-15xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-800 text-transparent bg-clip-text">
+        VISION
+      </h1>
+      <p class="text-sm md:text-3xl text-white font-semibold max-w-2xl leading-relaxed">
+        Allied Health Training Institute
+      </p>
+    </div>
+    <div><img
+      src="./svg/home photo.svg"
+      alt="Chefs"
+      class="rounded-lg shadow-xxl "
+    />  </div>
+    </header >
+          <div class="text-center justify-center bg-black items-center text-white p-5 m-0"><p>( Affiliated to BSS-NDA, Promoted by GOVT.OF India )  ISO 9001:2015</p></div>
+
+    <!-- About Section -->
+    <section
+      class="container mx-auto py-16 flex flex-col md:flex-row items-center gap-2 px-6"
+    >
+    <!-- Background Image (behind content) -->
+  <div class="absolute inset-0 -z-10">
+    <img 
+      src="./img/Sect 3 background.png" 
+      alt="Background"
+      class="w-full h-full object-cover opacity-20"
+    >
+  </div>
+      <div class="w-full md:w-1/2">
+        <img
+          src="./img/image.png"
+          alt="Chefs"
+          class="rounded-lg shadow-xxl "
+        />
+      </div>
+      
+      <div
+        class="w-full md:w-1/2 p-8 bg-yellow-100 rounded-lg shadow-xl border border-yellow-300"
+      >
+        <h3 class="text-3xl font-bold text-red-900">
+          Welcome to Royal Vision Hotel Management and Allied health Training Institute
+        </h3>
+        <p class="mt-6 text-gray-900  leading-relaxed">
+          Royal Vision Institute of Hotel Management, a premier catering college in Chennai, offers a pathway to a thriving career in Hotel Management , a field that remains perpetually in demand. As the hospitality industry continues to expand globally, skilled professionals are essential to meet its evolving needs. We pride ourselves on providing affordable education with exceptional quality , ensuring students receive comprehensive training without financial burden.
+        <p class="mt-4 text-gray-900  leading-relaxed">
+        Our programs emphasize practical education , offering hands-on experience in hotel operations, food production, event management, and more. With state-of-the-art facilities and expert faculty, we prepare students to excel in leadership roles within this dynamic industry. At Royal Vision, graduates are equipped to seize boundless opportunities in a future-proof sector , making us the ideal choice for those seeking excellence in hotel management.
+        </p>
+        <button
+          class="mt-6 px-8 py-3 bg-red-950 text-white text-lg font-bold hover:bg-red-800 shadow-lg"
+        >
+          More Information
+        </button>
+      </div>
+    </section>
+    <!-- JavaScript for hamburger menu functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburgerButton.addEventListener('click', function() {
+      // Toggle menu visibility
+      if (navMenu.classList.contains('hidden')) {
+        navMenu.classList.remove('hidden');
+      } else {
+        navMenu.classList.add('hidden');
+      }
+    });
+    
+    // Close menu when clicking on links (for mobile)
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth < 1024) { // 1024px is the lg breakpoint in Tailwind
+          navMenu.classList.add('hidden');
+        }
+      });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1024) {
+        navMenu.classList.remove('hidden');
+      } else if (!navMenu.classList.contains('hidden') && !hamburgerButton.classList.contains('active')) {
+        navMenu.classList.add('hidden');
+      }
+    });
+    
+    // Initialize menu state based on screen size
+    if (window.innerWidth >= 1024) {
+      navMenu.classList.remove('hidden');
+    }
+  });
+</script>
+  </body>
+</html>
