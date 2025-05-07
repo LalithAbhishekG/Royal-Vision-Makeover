@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Royal Vision</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,129 +11,133 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'abhaya': ['"Abhaya Libre"', 'serif'],
+            },
+            colors: {
+              'royal-maroon': '#3A0000',
+              'royal-gold': '#D6AF36',
+            }
+          },
+        },
+      }
+    </script>
   </head>
-  <body class="relative bg-gray-100 pt-16">
+  <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
     <!-- Navbar -->
     <nav
-      class="RV Nav_list bg-red-950 text-white py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50"
+      class="RV-Nav-list bg-royal-maroon text-[#3A0000] py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
     >
-      <h1 class="text-2xl font-bold">LOGO</h1>
+      <h1 class="text-2xl text-white font-bold">LOGO</h1>
 
       <!-- Hamburger Menu Button (visible on mobile) -->
-      <button id="hamburger-button" class="lg:hidden focus:outline-none">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-menu"
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button id="hamburger-button" class="lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
+        <div class="relative flex flex-col justify-center items-center w-6 h-6">
+          <!-- Hamburger bars with transitions -->
+          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-yellow-400 h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-yellow-400 h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-yellow-400 h-0.5 w-6 rounded-sm absolute"></span>
+        </div>
       </button>
 
       <!-- Navigation Menu -->
+      <div id="nav-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
+      
       <ul
         id="nav-menu"
-        class="hidden lg:flex lg:space-x-6 flex-col lg:flex-row fixed lg:static top-16 left-0 right-0 bg-red-950 lg:bg-transparent p-4 lg:p-0 space-y-4 lg:space-y-0"
+        class="RV-links hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-royal-maroon lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
       >
         <li>
-          <a href="#" class="text-yellow-400 hover:text-yellow-500">Home</a>
+          <a href="#" class="nav-link block text-yellow-400 hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
         </li>
         <li>
-          <a href="#" class="text-yellow-400 hover:text-yellow-500">About Us</a>
+          <a href="#" class="nav-link block text-yellow-400 hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
         </li>
         <li>
-          <a href="#" class="text-yellow-400 hover:text-yellow-500">Courses</a>
+          <a href="#" class="nav-link block text-yellow-400 hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
         </li>
         <li>
-          <a href="#" class="text-yellow-400 hover:text-yellow-500"
-            >Contact Us</a
-          >
+          <a href="#" class="nav-link block text-yellow-400 hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
         </li>
         <li>
-          <a href="#" class="text-yellow-400 hover:text-yellow-500"
-            >Admissions</a
-          >
+          <a href="#" class="nav-link block text-yellow-400 hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
         </li>
-        <li>
-          <img src="./svg/whatsapp.svg" alt="whatsapp icon" />
-        </li>
-        <li>
-          <img src="./svg/insta.svg" alt="insta icon" />
-        </li>
+        <div class="flex space-x-4 mt-6 lg:mt-0">
+          <li>
+            <img src="./svg/whatsapp.svg" alt="whatsapp icon" class="social-icon w-6 h-6 cursor-pointer hover:opacity-80 transition-opacity"/>
+          </li>
+          <li>
+            <img src="./svg/insta.svg" alt="insta icon" class="social-icon w-6 h-6 cursor-pointer hover:opacity-80 transition-opacity"/>
+          </li>
+        </div>
       </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-[70vh] sm:h-[80vh] md:h-[90vh]">
+    <header class="RV-hero-section relative h-[70vh] sm:h-[80vh] md:h-[90vh]">
       <img
         src="./img/Home BG.png"
         alt="Hero Background"
-        class="absolute inset-0 w-full h-full pt-0 object-cover"
+        class="RV-hero-bg absolute inset-0 w-full h-full pt-0 object-cover"
       />
 
       <div
-        class="absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-center items-center text-center px-4 space-y-4"
+        class="RV-hero-content absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-center items-center text-center px-4 space-y-4"
       >
-        <div class="RV w-full md:w-1/2 space-y-0">
+        <div class="RV-hero-text w-full md:w-1/2 space-y-0">
           <h1
-            class="royal-vision-text 0 text-7xl md:text-8xl lg:text-15xl xl:text-[11rem] font-extrabold bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
+            class="RV-brand-heading font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-7xl md:text-8xl lg:text-15xl xl:text-[11rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
           >
             ROYAL
           </h1>
           <h1
-            class="royal-vision-text text-7xl md:text-8xl lg:text-15xl xl:text-[11rem] font-extrabold bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
+            class="RV-brand-heading font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-7xl md:text-8xl lg:text-15xl xl:text-[11rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
           >
             VISION
           </h1>
-          <div class="divider-line"></div>
-          <p class="allied-text font-normal">
+          <div class="divider h-0.5 bg-white w-full max-w-[530px] mx-auto my-2"></div>
+          <p class="tagline  font-abhaya text-2xl md:text-base lg:text-2xl tracking-wider text-white normal-case">
             Allied Health Training Institute
           </p>
           <!-- Chef image will appear here on mobile -->
-          <div class="md:hidden mt-4">
+          <div class="hero-image-mobile md:hidden mt-4">
             <img src="./svg/home photo.svg" alt="Chefs" />
           </div>
         </div>
         <!-- Chef image will only appear here on tablet and larger screens -->
-        <div class="hidden md:block">
+        <div class="hero-image-desktop hidden md:block">
           <img src="./svg/home photo.svg" alt="Chefs" />
         </div>
       </div>
     </header>
 
     <div
-      class="text-center justify-center bg-black items-center text-white pt-2 pb-2"
+      class="affiliation-banner text-center justify-center bg-black items-center text-white pt-2 pb-2"
     >
       <p>( Affiliated to BSS-NDA, Promoted by GOVT.OF India ) ISO 9001:2015</p>
     </div>
 
     <!-- About Section -->
-    <section class="section-3 container flex flex-col md:flex-row  m-0">
-      <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-0 md:mb-0">
+    <section class="about-section bg-[url('img/Sect3-background.png')] bg-cover bg-center items-center max-w-[110%] flex flex-col md:flex-row m-0 ">
+      <div class="about-image w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-0 md:mb-0">
         <img src="./img/image.png" alt="Chefs" class="items-center" />
       </div>
 
       <div
-        class=" w-full md:w-1/2 pt-5 p-6 pt-9"
+        class="about-content w-full md:w-1/2 pt-5 p-6 pt-9"
       >
         <h3
-          class="text-lg sm:text-2xl md:text-2xl lg:text-3xl font-extrabold text-red-900 pr-4 pt-6"
+          class="about-heading text-lg sm:text-2xl md:text-2xl lg:text-3xl font-extrabold text-[#3A0000] pr-4 pt-6"
         >
           Welcome to Royal Vision Hotel Management and Allied health Training
           Institute
         </h3>
         <p
-          class="mt-2 text-[11px] sm:text-base  md:text-[1rem]  xl:text-[1.1rem] font-extrabold leading-relaxed pt-3 pr-4"
+          class="about-text mt-2 text-[11px] sm:text-base  md:text-[1rem]  xl:text-[1.1rem] font-extrabold leading-relaxed pt-3 pr-4"
         >
           Royal Vision Institute of Hotel Management, a premier catering college
           in Chennai, offers a pathway to a thriving career in Hotel Management,
@@ -145,7 +148,7 @@
           receive comprehensive training without financial burden.
         </p>
         <p
-          class="mt-2 text-[11px] md:text-[1rem] sm:text-base xl:text-[1.1rem] font-extrabold leading-relaxed pt-3 pr-4"
+          class="about-text mt-2 text-[11px] md:text-[1rem] sm:text-base xl:text-[1.1rem] font-extrabold leading-relaxed pt-3 pr-4"
         >
           Our programs emphasize practical education, offering hands-on
           experience in hotel operations, food production, event management, and
@@ -156,34 +159,291 @@
           excellence in hotel management.
         </p>
         <button
-          class="RV-BUTTON text-red-300 font-extrabold w-full bg-red-900 md:w-full lg:w-full mt-10 p-1 "
+          class="info-button text-[#FFAB36] font-extrabold w-full bg-[#3A0000] md:w-full lg:w-full mt-10 p-1 hover:bg-red-800 transition-colors duration-200"
         >
           More Information
         </button>
       </div>
+
+    
     </section>
-    <!-- JavaScript for hamburger menu functionality -->
+    <div
+      class="RV-gallery-bar text-center justify-center bg-black items-center text-white pt-3 pb-3 mt-0"
+    >
+      <p>Gallery</p>
+    </div>
+    <div class="RV-Gallery bg-black ">
+      <!-- Carousel Container -->
+      <div class=" Carousel-Container relative overflow-hidden rounded-lg shadow-xl">
+        <!-- Carousel Track -->
+        <div id="carousel-track" class="flex transition-transform duration-300 ease-in-out">
+          <!-- Slides will be inserted here by JavaScript -->
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+      
+      <!-- Tagline and Contact Banner -->
+      <div class="flex items-stretch text-[#3B0100] font-semibold text-lg bg-[#FBC171] border-y-[10px] border-[#3B0100]">
+        <!-- Left Section -->
+        <div class="w-3/4 flex items-center justify-center rounded-bl-lg px-2 py-2">
+          <p>"Just step in as a Novice and Step out as an expert"</p>
+        </div>
+      
+        
+      
+        <!-- Right Section -->
+        <div class="flex flex-col items-center justify-center px-2 py-2">
+          <p class="text-xl">For Admission Contact</p>
+          <p class="text-2xl font-bold">7448 500 500</p>
+        </div>
+      </div>
+      
+      
+
+     <!-- Map and Contact Info -->
+<div class="bg-[#3A0000] p-4 md:p-8">
+  <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+      <!-- Map Section -->
+      <div class="RV-map w-full md:w-1/2 bg-gray-300 h-80">
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15561.397769652067!2d79.962849!3d13.1258834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528fa815854655%3A0x1d7293543fcc0d27!2sRoyal%20Vision%20Institute%20of%20Hotel%20Management%20Allied%20Health%20Training%20Institute!5e0!3m2!1sen!2sin!4v1714997368363!5m2!1sen!2sin" 
+              width="100%"  
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full">
+          </iframe>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="w-full md:w-1/2 flex flex-col gap-4">
+          <!-- Address -->
+          <div class="RV-Address bg-gray-300 p-4 h-30 flex-row   justify-center">
+            
+            <p class="items-center text-center text-2xl"> Where We Are  </p>
+            <p class="text-lg text-gray-800 items-center text-center  ">  
+               
+                No.3/325, Vigneswar Nagar,<br>
+                Sevvapet, Tirur Post,
+                Thiruvallur Dist,<br>
+                TamilNadu,India - 602025.
+                (Near Sevvapet Railway Station)
+              </p>
+          </div>
+
+          <!-- Phone & mail -->
+          <div class="Phone-mail bg-gray-300 p-3 h-30 flex items-center text-center  justify-center">
+              
+        
+            <p class="text-lg text-gray-800 items-center text-center ">              
+                Mobile No: <br>
+                7448 500 500 ,
+                9444 74 3665 ,
+                733 908 7776 ,
+                733 909 7776<br>
+                
+                Mail ID:
+                <br> savithagiri@gmail.com<br>
+                royalvision.ihm@gmail.com
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+      
+      <!-- Footer -->
+      <footer class="bg-black text-white py-4 px-6">
+          <div class="container mx-auto text-center">
+              <p class="text-sm">Copyright © 2019 Royal Vision Hotel Management and Allied health Training Institute. All Rights Reserved. Designed by RVHM</p>
+          </div>
+      </footer>
+  
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Image data - replace with your actual images
+          const images = [
+            { src: './img/gallerypics/gallerypic1.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic2.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic3.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic4.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic5.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic6.jpg', alt: 'Image 1' },
+            { src: './img/gallerypics/gallerypic7.jpg', alt: 'Image 1' },
+      
+          ];
+    
+          const carouselTrack = document.getElementById('carousel-track');
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+          
+          let currentIndex = 0;
+          const visibleCount = 4; // Number of images to show at once
+          let interval;
+    
+          // Initialize carousel
+          function initCarousel() {
+            carouselTrack.innerHTML = '';
+            
+            // Create slides
+            images.forEach((image, index) => {
+              const slide = document.createElement('div');
+              slide.className = 'min-w-[25%] p-1 flex-shrink-0'; // 25% width for 4 images
+              slide.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" class="w-full h-48 object-cover rounded-lg">
+              `;
+              carouselTrack.appendChild(slide);
+            });
+    
+            startAutoSlide();
+          }
+    
+          // Update carousel position
+          function updateCarousel() {
+            const slideWidth = 100 / visibleCount; // Percentage per slide
+            carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            resetAutoSlide();
+          }
+    
+          // Next slide
+          function nextSlide() {
+            if (currentIndex < images.length - visibleCount) {
+              currentIndex++;
+            } else {
+              currentIndex = 0; // Loop back to start
+            }
+            updateCarousel();
+          }
+    
+          // Previous slide
+          function prevSlide() {
+            if (currentIndex > 0) {
+              currentIndex--;
+            } else {
+              currentIndex = images.length - visibleCount; // Loop to end
+            }
+            updateCarousel();
+          }
+    
+          // Auto-slide functionality
+          function startAutoSlide() {
+            interval = setInterval(nextSlide, 3000);
+          }
+    
+          function resetAutoSlide() {
+            clearInterval(interval);
+            startAutoSlide();
+          }
+    
+          // Event listeners
+          prevBtn.addEventListener('click', prevSlide);
+          nextBtn.addEventListener('click', nextSlide);
+    
+          // Pause on hover
+          carouselTrack.addEventListener('mouseenter', () => clearInterval(interval));
+          carouselTrack.addEventListener('mouseleave', startAutoSlide);
+    
+          // Initialize
+          initCarousel();
+        });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript for modern hamburger menu functionality -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const hamburgerButton = document.getElementById("hamburger-button");
         const navMenu = document.getElementById("nav-menu");
-
-        hamburgerButton.addEventListener("click", function () {
-          // Toggle menu visibility
-          if (navMenu.classList.contains("hidden")) {
-            navMenu.classList.remove("hidden");
+        const overlay = document.getElementById("nav-menu-overlay");
+        const hamburgerLines = document.querySelectorAll(".hamburger-line");
+        
+        // Position the hamburger lines initially
+        hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[2].classList.add("translate-y-2");
+        
+        function toggleMenu() {
+          // Toggle menu visibility and transform
+          const isOpen = navMenu.classList.contains("translate-x-0");
+          
+          if (isOpen) {
+            // Close the menu
+            navMenu.classList.remove("translate-x-0");
+            navMenu.classList.add("translate-x-full");
+            overlay.classList.add("opacity-0");
+            
+            // After transition is complete, hide overlay
+            setTimeout(() => {
+              overlay.classList.add("hidden");
+            }, 300);
+            
+            // Reset hamburger icon to initial state
+            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+            hamburgerLines[0].classList.add("-translate-y-2");
+            hamburgerLines[1].classList.remove("opacity-0");
+            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+            hamburgerLines[2].classList.add("translate-y-2");
+            
+            // Allow body to scroll again
+            document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
           } else {
-            navMenu.classList.add("hidden");
+            // Open the menu
+            navMenu.classList.remove("hidden", "translate-x-full");
+            navMenu.classList.add("translate-x-0");
+            overlay.classList.remove("hidden");
+            
+            // Delay the opacity transition for a smoother appearance
+            setTimeout(() => {
+              overlay.classList.remove("opacity-0");
+            }, 10);
+            
+            // Transform hamburger icon to X
+            hamburgerLines[0].classList.remove("-translate-y-2");
+            hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
+            hamburgerLines[1].classList.add("opacity-0");
+            hamburgerLines[2].classList.remove("translate-y-2");
+            hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
+            
+            // Prevent body scrolling when menu is open on mobile
+            document.body.classList.add("overflow-hidden", "lg:overflow-auto");
           }
-        });
+        }
+
+        hamburgerButton.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", toggleMenu);
 
         // Close menu when clicking on links (for mobile)
         const navLinks = navMenu.querySelectorAll("a");
         navLinks.forEach((link) => {
           link.addEventListener("click", function () {
             if (window.innerWidth < 1024) {
-              // 1024px is the lg breakpoint in Tailwind
-              navMenu.classList.add("hidden");
+              toggleMenu();
             }
           });
         });
@@ -191,18 +451,36 @@
         // Handle window resize
         window.addEventListener("resize", function () {
           if (window.innerWidth >= 1024) {
-            navMenu.classList.remove("hidden");
-          } else if (
-            !navMenu.classList.contains("hidden") &&
-            !hamburgerButton.classList.contains("active")
-          ) {
-            navMenu.classList.add("hidden");
+            // Reset everything when switching to desktop view
+            navMenu.classList.remove("hidden", "translate-x-full");
+            navMenu.classList.add("translate-x-0");
+            overlay.classList.add("hidden", "opacity-0");
+            
+            // Reset hamburger icon
+            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+            hamburgerLines[0].classList.add("-translate-y-2");
+            hamburgerLines[1].classList.remove("opacity-0");
+            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+            hamburgerLines[2].classList.add("translate-y-2");
+            
+            // Allow body to scroll
+            document.body.classList.remove("overflow-hidden");
+          } else {
+            // Make sure menu is hidden on mobile by default
+            if (!hamburgerButton.classList.contains("active")) {
+              navMenu.classList.add("translate-x-full");
+              navMenu.classList.remove("translate-x-0");
+              overlay.classList.add("hidden", "opacity-0");
+            }
           }
         });
 
         // Initialize menu state based on screen size
         if (window.innerWidth >= 1024) {
-          navMenu.classList.remove("hidden");
+          navMenu.classList.remove("hidden", "translate-x-full");
+          navMenu.classList.add("translate-x-0");
+        } else {
+          navMenu.classList.add("translate-x-full");
         }
       });
     </script>
