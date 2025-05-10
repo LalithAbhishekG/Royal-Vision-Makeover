@@ -122,22 +122,22 @@
     </div>
 
     <!-- About Section -->
-    <section class="about-section bg-[url('img/Sect3-background.png')] bg-cover bg-center items-center max-w-[100%]  h-[800px] flex flex-col justify-between gap-20 md:flex-row  m-0 ">
-      <div class="about-image w-[1000px] h-[800px] w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-0 md:mb-0">
-        <img src="./img/image.png" alt="Chefs" class="items-center w-[1000px] h-[800px]  "  />
+    <section class="about-section bg-[url('img/Sect3-background.png')] bg-cover bg-center items-center max-w-[100%] lg:h-[800px] md:h-[800px] h-[1000px] flex flex-col justify-between gap-20 md:flex-row  ">
+      <div class="about-image w-[1600px] h-[800px] w-full  mb-0 md:mb-0">
+        <img src="./img/image.png" alt="Chefs" class="items-center  m-0 md:w-[1600px] md:h-[800px]  "  />
       </div>
 
       <div
-        class="about-content w-full md: m-0 pr-9 p-2 pt-9"
+        class="about-content w-full md:m-0 pr-9 p-5 lg:pt-9 md:pt-9"
       >
         <h3
-          class="about-heading text-lg sm:text-2xl md:text-3xl lg:text-4xl pb-9 font-extrabold text-[#3A0000] "
+          class="about-heading text-lg sm:text-3xl md:text-4xl lg:text-5xl lg:pt-9 md:pt-9  font-extrabold text-[#3A0000] "
         >
           Welcome to Royal Vision Hotel Management and Allied health Training
           Institute
         </h3>
         <p
-          class="about-text mt-2 text-[11px] sm:text-base  md:text-[20px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide pt-4 pr-9"
+          class="about-text mt-2 text-[11px] sm:text-base  md:text-[20px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide md:pt-4 pr-9"
         >
           Royal Vision Institute of Hotel Management, a premier catering college
           in Chennai, offers a pathway to a thriving career in Hotel Management,
@@ -148,7 +148,7 @@
           receive comprehensive training without financial burden.
         </p>
         <p
-          class="about-text mt-2 text-[11px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed pt-3 pb-9 pr-9"
+          class="about-text mt-2 text-[11px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed md:pt-3 pb-9 pr-9"
         >
           Our programs emphasize practical education, offering hands-on
           experience in hotel operations, food production, event management, and
@@ -213,10 +213,10 @@
       
 
      <!-- Map and Contact Info -->
-<div class="bg-[#3A0000] p-4 md:p-8">
+<div class="bg-[#3A0000] p-4 md:p-8 ">
   <div class="flex flex-col md:flex-row gap-4 md:gap-8">
       <!-- Map Section -->
-      <div class="RV-map w-full md:w-1/2 bg-gray-300 h-80">
+      <div class="RV-map w-full md:w-1/2 bg-gray-300 h-50">
           <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15561.397769652067!2d79.962849!3d13.1258834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528fa815854655%3A0x1d7293543fcc0d27!2sRoyal%20Vision%20Institute%20of%20Hotel%20Management%20Allied%20Health%20Training%20Institute!5e0!3m2!1sen!2sin!4v1714997368363!5m2!1sen!2sin" 
               width="100%"  
@@ -292,7 +292,7 @@
           const nextBtn = document.getElementById('nextBtn');
           
           let currentIndex = 0;
-          const visibleCount = 4; // Number of images to show at once
+          const visibleCount = 5; // Number of images to show at once
           let interval;
     
           // Initialize carousel
@@ -302,7 +302,7 @@
             // Create slides
             images.forEach((image, index) => {
               const slide = document.createElement('div');
-              slide.className = 'min-w-[25%] p-1 flex-shrink-0'; // 25% width for 4 images
+              slide.className = 'min-w-[20%] p-1 flex-shrink-0'; // 205% width for 54 images
               slide.innerHTML = `
                 <img src="${image.src}" alt="${image.alt}" class="w-full h-48 object-cover rounded-lg">
               `;
@@ -341,7 +341,7 @@
     
           // Auto-slide functionality
           function startAutoSlide() {
-            interval = setInterval(nextSlide, 3000);
+            interval = setInterval(nextSlide, 5000);
           }
     
           function resetAutoSlide() {
