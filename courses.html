@@ -33,50 +33,49 @@
   <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
     <!-- Navbar -->
     <nav
-      class="RV-Nav-list bg-black text-black py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
+      class="navbar_main bg-royal-maroon text-[#3A0000] py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
     >
-      <h1 class="text-2xl text-white font-bold">LOGO</h1>
+      <h1 class="nav__logo text-2xl text-white font-bold">LOGO</h1>
 
       <!-- Hamburger Menu Button (visible on mobile) -->
-      <button id="hamburger-button" class="lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
-        <div class="relative flex flex-col justify-center items-center w-6 h-6">
+      <button id="navbar__hamburger" class="navbar__hamburger lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
+        <div class="navbar__hamburger-icon relative flex flex-col justify-center items-center w-6 h-6">
           <!-- Hamburger bars with transitions -->
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
         </div>
       </button>
 
       <!-- Navigation Menu -->
-      <div id="nav-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
+      <div id="navbar__overlay" class="navbar__overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
       
       <ul
-        id="nav-menu"
-        class="RV-links hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-black lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
+        id="navbar__menu"
+        class="navbar__menu hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-black lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
       >
         <li>
-          <a href="./index.html" class="nav-link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
+          <a href="./index.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
         </li>
         <li>
-          <a href="./AboutUs.html" class="nav-link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
+          <a href="./AboutUs.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
         </li>
         <li>
-          <a href="./courses.html" class="nav-link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
+          <a href="./courses.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
         </li>
         <li>
-          <a href="./contact.html" class="nav-link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
+          <a href="./contact.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
         </li>
         <li>
-          <a href="./Admissions.html" class="nav-link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
+          <a href="./Admissions.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
         </li>
-        <div class="flex space-x-4 mt-6 lg:mt-0">
-          <li>
-            <img src="./img/imgofcontactbg/whatsapp-svgrepo-com.svg" alt="whatsapp icon" class="social-icon w-8  h-8 cursor-pointer hover:opacity-80 transition-opacity"/>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./img/imgofcontactbg/whatsapp-svgrepo-com.svg" alt="whatsapp icon" class="navbar__icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-white text-xl">Whatsapp</p>
           </li>
-          <li>
-            <img src="./img/imgofcontactbg/I gram.svg" alt="insta icon" class="social-icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./img/imgofcontactbg/I gram.svg" alt="insta icon" class="navbar__icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-white pl-2 text-xl">Instagram</p>
           </li>
-        </div>
+        
       </ul>
     </nav>
 
@@ -242,114 +241,90 @@
           </div>
       </footer>   
 
-         <!-- JavaScript for modern hamburger menu functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburgerButton = document.getElementById("hamburger-button");
-        const navMenu = document.getElementById("nav-menu");
-        const overlay = document.getElementById("nav-menu-overlay");
-        const hamburgerLines = document.querySelectorAll(".hamburger-line");
-        
-        // Position the hamburger lines initially
+ 
+    <!-- JavaScript for modern hamburger menu functionality -->
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerButton = document.getElementById("navbar__hamburger");
+    const navMenu = document.getElementById("navbar__menu");
+    const overlay = document.getElementById("navbar__overlay");
+    const hamburgerLines = document.querySelectorAll(".navbar__hamburger-line");
+    
+    // Position the hamburger lines initially
+    hamburgerLines[0].classList.add("-translate-y-2");
+    hamburgerLines[2].classList.add("translate-y-2");
+    
+    function toggleMenu() {
+      const isOpen = navMenu.classList.contains("translate-x-0");
+      if (isOpen) {
+        navMenu.classList.remove("translate-x-0");
+        navMenu.classList.add("translate-x-full");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+        }, 300);
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
         hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
         hamburgerLines[2].classList.add("translate-y-2");
-        
-        function toggleMenu() {
-          // Toggle menu visibility and transform
-          const isOpen = navMenu.classList.contains("translate-x-0");
-          
-          if (isOpen) {
-            // Close the menu
-            navMenu.classList.remove("translate-x-0");
-            navMenu.classList.add("translate-x-full");
-            overlay.classList.add("opacity-0");
-            
-            // After transition is complete, hide overlay
-            setTimeout(() => {
-              overlay.classList.add("hidden");
-            }, 300);
-            
-            // Reset hamburger icon to initial state
-            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
-            hamburgerLines[0].classList.add("-translate-y-2");
-            hamburgerLines[1].classList.remove("opacity-0");
-            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
-            hamburgerLines[2].classList.add("translate-y-2");
-            
-            // Allow body to scroll again
-            document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
-          } else {
-            // Open the menu
-            navMenu.classList.remove("hidden", "translate-x-full");
-            navMenu.classList.add("translate-x-0");
-            overlay.classList.remove("hidden");
-            
-            // Delay the opacity transition for a smoother appearance
-            setTimeout(() => {
-              overlay.classList.remove("opacity-0");
-            }, 10);
-            
-            // Transform hamburger icon to X
-            hamburgerLines[0].classList.remove("-translate-y-2");
-            hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
-            hamburgerLines[1].classList.add("opacity-0");
-            hamburgerLines[2].classList.remove("translate-y-2");
-            hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
-            
-            // Prevent body scrolling when menu is open on mobile
-            document.body.classList.add("overflow-hidden", "lg:overflow-auto");
-          }
-        }
+        document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
+      } else {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.remove("hidden");
+        setTimeout(() => {
+          overlay.classList.remove("opacity-0");
+        }, 10);
+        hamburgerLines[0].classList.remove("-translate-y-2");
+        hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
+        hamburgerLines[1].classList.add("opacity-0");
+        hamburgerLines[2].classList.remove("translate-y-2");
+        hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
+        document.body.classList.add("overflow-hidden", "lg:overflow-auto");
+      }
+    }
 
-        hamburgerButton.addEventListener("click", toggleMenu);
-        overlay.addEventListener("click", toggleMenu);
+    hamburgerButton.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
 
-        // Close menu when clicking on links (for mobile)
-        const navLinks = navMenu.querySelectorAll("a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            if (window.innerWidth < 1024) {
-              toggleMenu();
-            }
-          });
-        });
-
-        // Handle window resize
-        window.addEventListener("resize", function () {
-          if (window.innerWidth >= 1024) {
-            // Reset everything when switching to desktop view
-            navMenu.classList.remove("hidden", "translate-x-full");
-            navMenu.classList.add("translate-x-0");
-            overlay.classList.add("hidden", "opacity-0");
-            
-            // Reset hamburger icon
-            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
-            hamburgerLines[0].classList.add("-translate-y-2");
-            hamburgerLines[1].classList.remove("opacity-0");
-            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
-            hamburgerLines[2].classList.add("translate-y-2");
-            
-            // Allow body to scroll
-            document.body.classList.remove("overflow-hidden");
-          } else {
-            // Make sure menu is hidden on mobile by default
-            if (!hamburgerButton.classList.contains("active")) {
-              navMenu.classList.add("translate-x-full");
-              navMenu.classList.remove("translate-x-0");
-              overlay.classList.add("hidden", "opacity-0");
-            }
-          }
-        });
-
-        // Initialize menu state based on screen size
-        if (window.innerWidth >= 1024) {
-          navMenu.classList.remove("hidden", "translate-x-full");
-          navMenu.classList.add("translate-x-0");
-        } else {
-          navMenu.classList.add("translate-x-full");
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        if (window.innerWidth < 1024) {
+          toggleMenu();
         }
       });
-    </script>
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.add("hidden", "opacity-0");
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+        hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+        hamburgerLines[2].classList.add("translate-y-2");
+        document.body.classList.remove("overflow-hidden");
+      } else {
+        if (!hamburgerButton.classList.contains("active")) {
+          navMenu.classList.add("translate-x-full");
+          navMenu.classList.remove("translate-x-0");
+          overlay.classList.add("hidden", "opacity-0");
+        }
+      }
+    });
+
+    if (window.innerWidth >= 1024) {
+      navMenu.classList.remove("hidden", "translate-x-full");
+      navMenu.classList.add("translate-x-0");
+    } else {
+      navMenu.classList.add("translate-x-full");
+    }
+  });
+</script>
 
 
 
