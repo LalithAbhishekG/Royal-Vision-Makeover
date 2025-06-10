@@ -30,82 +30,81 @@
   <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
     <!-- Navbar -->
     <nav
-      class="RV-Nav-list bg-royal-maroon text-[#3A0000] py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
+      class="navbar_main bg-royal-maroon text-[#3A0000] py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
     >
-      <h1 class="text-2xl text-white font-bold">LOGO</h1>
+      <h1 class="nav__logo text-2xl text-white font-bold">LOGO</h1>
 
       <!-- Hamburger Menu Button (visible on mobile) -->
-      <button id="hamburger-button" class="lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
-        <div class="relative flex flex-col justify-center items-center w-6 h-6">
+      <button id="navbar__hamburger" class="navbar__hamburger lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
+        <div class="navbar__hamburger-icon relative flex flex-col justify-center items-center w-6 h-6">
           <!-- Hamburger bars with transitions -->
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
         </div>
       </button>
 
       <!-- Navigation Menu -->
-      <div id="nav-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
+      <div id="navbar__overlay" class="navbar__overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
       
       <ul
-        id="nav-menu"
-        class="RV-links hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-royal-maroon lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
+        id="navbar__menu"
+        class="navbar__menu hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-royal-maroon lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
       >
         <li>
-          <a href="./index.html" class="nav-link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
+          <a href="./index.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
         </li>
         <li>
-          <a href="./AboutUs.html" class="nav-link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
+          <a href="./AboutUs.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
         </li>
         <li>
-          <a href="./courses.html" class="nav-link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
+          <a href="./courses.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
         </li>
         <li>
-          <a href="./contact.html" class="nav-link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
+          <a href="./contact.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
         </li>
         <li>
-          <a href="./Admissions.html" class="nav-link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
+          <a href="./Admissions.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
         </li>
-        <div class="flex space-x-4 mt-6 lg:mt-0">
-          <li>
-            <img src="./svg/whatsapp.svg" alt="whatsapp icon" class="social-icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./svg/whatsapp.svg" alt="whatsapp icon" class="navbar__icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] text-xl">Whatsapp</p>
           </li>
-          <li>
-            <img src="./svg/insta.svg" alt="insta icon" class="social-icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./svg/insta.svg" alt="insta icon" class="navbar__icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] pl-2 text-xl">Instagram</p>
           </li>
-        </div>
+        
       </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header class="RV-hero-section  bg-cover  bg-fixed relative h-[70vh] sm:h-[80vh] md:h-[90vh] " style="background-image: url('./img/indeximg/Home\ BG.png')" >
+    <header class="hero__section  bg-cover  bg-fixed relative h-[70vh] sm:h-[80vh] md:h-[90vh] " style="background-image: url('./img/indeximg/Home\ BG.png')" >
      
 
       <div
-        class="RV-hero-content absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-between items-center text-center  space-y-4"
+        class="hero__content absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-between items-center text-center  space-y-4"
       >
-        <div class="RV-hero-text w-full md:w-1/2  space-y-0">
+        <div class="hero__text w-full md:w-1/2  space-y-0">
           <h1
-            class="RV-brand-heading font-abhaya mt-[80px] md:mt-[10px] font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
+            class="hero__title font-abhaya mt-[80px] md:mt-[10px] font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
           >
             ROYAL
           </h1>
           <h1
-            class="RV-brand-heading font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
+            class="hero__title font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
           >
             VISION
           </h1>
-          <div class="divider h-0.5 bg-white w-full max-w-[290px] md:max-w-[590px] mx-auto my-2"></div>
-          <p class="tagline  font-abhaya text-xl md:text-base lg:text-[2.5rem] tracking-wider text-white normal-case pt-2 md:pt-5">
+          <div class="hero__divider h-0.5 bg-white w-full max-w-[290px] md:max-w-[590px] mx-auto my-2"></div>
+          <p class="hero__tagline  font-abhaya text-xl md:text-base lg:text-[2.5rem] tracking-wider text-white normal-case pt-2 md:pt-5">
           Institute Of Hotel Management
           </p>
           <!-- Chef image will appear here on mobile -->
-          <div class="hero-image-mobile md:hidden items-center m-5 mt-6 pt-[50px] ">
+          <div class="hero__image-mobile md:hidden items-center m-5 mt-6 pt-[50px] ">
             <img src="./svg/home photo.svg" alt="Chefs" />
           </div>
         </div>
         <!-- Chef image will only appear here on tablet and larger screens -->
-        <div class="hero-image-desktop hidden w-[800px] h-[400px] md:block ">
+        <div class="hero__image-desktop hidden w-[800px] h-[400px] md:block ">
           <img src="./svg/home photo.svg" alt="Chefs" />
         </div>
       </div>
@@ -118,22 +117,22 @@
     </div>
 
     <!-- About Section -->
-    <section class="about-section bg-[url('img/indeximg/Sect-3-background.png')] bg-cover bg-center items-center max-w-[100%]  lg:h-[800px] md:h-[800px] h-[1400px] flex flex-col justify-between md:gap-20 md:flex-row  ">
-      <div class="about-image h-[800px] w-full mb-0 md:mb-0">
-        <img src="./img/indeximg/image (3).png" alt="Chefs" class="items-center m-0 md:w-[1600px] md:h-[800px]" />
+    <section class="about__section bg-[url('img/indeximg/Sect-3-background.png')] bg-cover bg-center items-center max-w-[100%]  lg:h-[800px] md:h-[800px] h-[1400px] flex flex-col justify-between md:gap-20 md:flex-row  ">
+      <div class="about__image h-[800px] w-full mb-0 md:mb-0">
+        <img src="./img/indeximg/image (3).png" alt="Chefs" class="about__img items-center m-0 md:w-[1600px] md:h-[800px]" />
       </div>
 
       <div
-        class="about-content w-full  text-justify md:m-0 pr-9 p-5 lg:pt-9 md:pt-9"
+        class="about__content w-full  text-justify md:m-0 pr-9 p-5 lg:pt-9 md:pt-9"
       >
         <h3
-          class="about-heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl lg:pt-9 md:pt-9 md:pr-10  font-extrabold text-[#3A0000] "
+          class="about__heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl lg:pt-9 md:pt-9 md:pr-10  font-extrabold text-[#3A0000] "
         >
           Welcome to Royal Vision Hotel Management and Allied health Training
           Institute
         </h3>
         <p
-          class="about-text mt-2 text-[18px] sm:text-base  md:text-[21px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide md:pt-4 "
+          class="about__text mt-2 text-[18px] sm:text-base  md:text-[21px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide md:pt-4 "
         >
           Royal Vision Institute of Hotel Management, a premier catering college
           in Chennai, offers a pathway to a thriving career in Hotel Management,
@@ -144,7 +143,7 @@
           receive comprehensive training without financial burden.
         </p>
         <p
-          class="about-text mt-2 text-[18px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed md:pt-3 pb-5 "
+          class="about__text mt-2 text-[18px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed md:pt-3 pb-5 "
         >
           Our programs emphasize practical education, offering hands-on
           experience in hotel operations, food production, event management, and
@@ -156,7 +155,7 @@
         </p>
         <a href="./AboutUs.html">
         <button
-       class="info-button text-[#FFAB36] font-extrabold text-2xl bg-[#3A0000] items-center w-full sm-full md:w-full lg:w-full mt-10 p-2 hover:bg-red-800 transition-colors duration-200 mb-5 "
+       class="about__button text-[#FFAB36] font-extrabold text-2xl bg-[#3A0000] items-center w-full sm-full md:w-full lg:w-full mt-10 p-2 hover:bg-red-800 transition-colors duration-200 mb-5 "
         >
           More Information 
         </button>
@@ -166,25 +165,25 @@
     
     </section>
     <div
-      class="RV-gallery-bar text-center justify-center bg-black items-center text-xl text-white pt-3 pb-3 mt-0"
+      class="gallery-bar text-center justify-center bg-black items-center text-xl text-white pt-3 pb-3 mt-0"
     >
       <p>Gallery</p>
     </div>
     <div class="RV-Gallery bg-black">
       <!-- Carousel Container -->
-      <div class="Carousel-Container relative overflow-hidden rounded-lg shadow-xl">
+      <div class="gallery__carousel-container relative overflow-hidden rounded-lg shadow-xl">
         <!-- Carousel Track -->
-        <div id="carousel-track" class="flex transition-transform duration-300 ease-in-out">
+        <div id="carousel-track" class="gallery__track flex transition-transform duration-300 ease-in-out">
           <!-- Slides will be inserted here by JavaScript -->
         </div>
         
         <!-- Navigation Buttons -->
-        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
+        <button id="prevBtn" class="gallery__button absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
         </button>
-        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
+        <button id="nextBtn" class="gallery__button absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
           </svg>
@@ -193,34 +192,34 @@
     </div>
       
       <!-- Tagline and Contact Banner -->
-      <div class="flex items-stretch text-[#3B0100] font-semibold text-lg bg-[#FBC171] border-y-[10px] border-[#3B0100]">
+      <div class="contact-banner flex items-stretch text-[#3B0100] font-semibold text-lg bg-[#FBC171] border-y-[10px] border-[#3B0100]">
         <!-- Left Section -->
-        <div class="w-3/4 flex items-center justify-center rounded-bl-lg px-2 py-2">
+        <div class="contact-banner__left w-3/4 flex items-center justify-center rounded-bl-lg px-2 py-2">
           <p>"Just step in as a Novice and Step out as an expert"</p>
         </div>
       
         
       
         <!-- Right Section -->
-        <div class="flex flex-col items-center justify-center px-2 py-2">
-          <p class="text-xl">For Admission Contact</p>
-          <p class="text-2xl font-bold">7448 500 500</p>
+        <div class="contact-banner__right flex flex-col items-center justify-center px-2 py-2">
+          <p class="contact-banner__title text-xl">For Admission Contact</p>
+          <p class="contact-banner__phone text-2xl font-bold">7448 500 500</p>
         </div>
       </div>
       
       
 
   <!-- Map and Contact Info -->
-<div class="bg-[#3A0000] p-4 md:pb-8  ">
+<div class="contact-section bg-[#3A0000] p-4 md:pb-8  ">
   <div class="flex flex-col md:flex-row gap-6 md:gap-8 max-w-7xl mx-auto border-4 border-royal-gold/30 rounded-xl p-3 shadow-[0_0_15px_rgba(214,175,54,0.3)] relative">
       <!-- Decorative corner elements -->
-      <div class="absolute -top-2 -left-2 w-4 h-4 border-t-4 border-l-4 border-royal-gold/50"></div>
-      <div class="absolute -top-2 -right-2 w-4 h-4 border-t-4 border-r-4 border-royal-gold/50"></div>
-      <div class="absolute -bottom-2 -left-2 w-4 h-4 border-b-4 border-l-4 border-royal-gold/50"></div>
-      <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-4 border-r-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -top-2 -left-2 w-4 h-4 border-t-4 border-l-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -top-2 -right-2 w-4 h-4 border-t-4 border-r-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -bottom-2 -left-2 w-4 h-4 border-b-4 border-l-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -bottom-2 -right-2 w-4 h-4 border-b-4 border-r-4 border-royal-gold/50"></div>
 
       <!-- Map Section -->
-      <div class="RV-map w-full md:w-1/3 bg-[#3A0000] rounded-lg overflow-hidden shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+      <div class="contact-section__map w-full md:w-1/3 bg-[#3A0000] rounded-lg overflow-hidden shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
           <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15561.397769652067!2d79.962849!3d13.1258834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528fa815854655%3A0x1d7293543fcc0d27!2sRoyal%20Vision%20Institute%20of%20Hotel%20Management%20Allied%20Health%20Training%20Institute!5e0!3m2!1sen!2sin!4v1714997368363!5m2!1sen!2sin" 
               width="100%"  
@@ -234,18 +233,18 @@
       </div>
 
       <!-- Contact Information -->
-      <div class=" max-w-8xl md:flex flex-row gap-4">
+      <div class="contact-section__info max-w-8xl md:flex flex-row gap-4">
           <!-- Address -->
-          <div class="RV-Address bg-[#3A0000]  rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+          <div class="contact-section__address bg-[#3A0000]  rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
             <div class="border-b-2 border-royal-gold/30 pb-3 mb-3">
-              <p class="text-xl  font-bold text-[#FBC171] text-center flex items-center justify-center gap-2">
+              <p class="contact-section__address-title text-xl  font-bold text-[#FBC171] text-center flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                 </svg>
                 Where We Are
               </p>
             </div>
-            <p class="text-base text-[#FBC171] text-center leading-relaxed">  
+            <p class="contact-section__address-text text-base text-[#FBC171] text-center leading-relaxed">  
                 No.3/325, Vigneswar Nagar,<br>
                 Sevvapet, Tirur Post,
                 Thiruvallur Dist,<br>
@@ -255,7 +254,7 @@
           </div>
 
           <!-- Phone & mail -->
-          <div class="Phone-mail bg-[#3A0000] rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+          <div class="contact-section__phone-mail bg-[#3A0000] rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
             <div class="border-b-2 border-royal-gold/30 pb-3 mb-3">
               <p class="text-xl font-bold text-[#FBC171] text-center flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
@@ -265,8 +264,8 @@
               </p>
             </div>
             <div class="md:flex  m-0 gap-9">
-              <div class="border-l-2 border-royal-gold/20 pl-4">
-                <p class="text-base font-semibold text-[#FBC171] mb-2 flex items-center gap-2">
+              <div class="contact-section__phone border-l-2 border-royal-gold/20 pl-4">
+                <p class=" text-base font-semibold text-[#FBC171] mb-2 flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
@@ -279,7 +278,7 @@
                     733 909 7776
                 </p>
               </div>
-              <div class="border-l-2 border-royal-gold/20 pl-4">
+              <div class="contact-section__email border-l-2 border-royal-gold/20 pl-4">
                 <p class="text-base font-semibold text-[#FBC171] mb-2 flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -303,7 +302,7 @@
 
       
       <!-- Footer -->
-      <footer class="bg-black text-white py-4 px-6">
+      <footer class="rv__footer  bg-black text-white py-4 px-6">
           <div class="container mx-auto text-center">
               <p class="text-sm">Copyright © 2019 Royal Vision Hotel Management and Allied health Training Institute. All Rights Reserved. Designed by RVHM</p>
           </div>
@@ -436,112 +435,87 @@
 
 
     <!-- JavaScript for modern hamburger menu functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburgerButton = document.getElementById("hamburger-button");
-        const navMenu = document.getElementById("nav-menu");
-        const overlay = document.getElementById("nav-menu-overlay");
-        const hamburgerLines = document.querySelectorAll(".hamburger-line");
-        
-        // Position the hamburger lines initially
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerButton = document.getElementById("navbar__hamburger");
+    const navMenu = document.getElementById("navbar__menu");
+    const overlay = document.getElementById("navbar__overlay");
+    const hamburgerLines = document.querySelectorAll(".navbar__hamburger-line");
+    
+    // Position the hamburger lines initially
+    hamburgerLines[0].classList.add("-translate-y-2");
+    hamburgerLines[2].classList.add("translate-y-2");
+    
+    function toggleMenu() {
+      const isOpen = navMenu.classList.contains("translate-x-0");
+      if (isOpen) {
+        navMenu.classList.remove("translate-x-0");
+        navMenu.classList.add("translate-x-full");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+        }, 300);
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
         hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
         hamburgerLines[2].classList.add("translate-y-2");
-        
-        function toggleMenu() {
-          // Toggle menu visibility and transform
-          const isOpen = navMenu.classList.contains("translate-x-0");
-          
-          if (isOpen) {
-            // Close the menu
-            navMenu.classList.remove("translate-x-0");
-            navMenu.classList.add("translate-x-full");
-            overlay.classList.add("opacity-0");
-            
-            // After transition is complete, hide overlay
-            setTimeout(() => {
-              overlay.classList.add("hidden");
-            }, 300);
-            
-            // Reset hamburger icon to initial state
-            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
-            hamburgerLines[0].classList.add("-translate-y-2");
-            hamburgerLines[1].classList.remove("opacity-0");
-            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
-            hamburgerLines[2].classList.add("translate-y-2");
-            
-            // Allow body to scroll again
-            document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
-          } else {
-            // Open the menu
-            navMenu.classList.remove("hidden", "translate-x-full");
-            navMenu.classList.add("translate-x-0");
-            overlay.classList.remove("hidden");
-            
-            // Delay the opacity transition for a smoother appearance
-            setTimeout(() => {
-              overlay.classList.remove("opacity-0");
-            }, 10);
-            
-            // Transform hamburger icon to X
-            hamburgerLines[0].classList.remove("-translate-y-2");
-            hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
-            hamburgerLines[1].classList.add("opacity-0");
-            hamburgerLines[2].classList.remove("translate-y-2");
-            hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
-            
-            // Prevent body scrolling when menu is open on mobile
-            document.body.classList.add("overflow-hidden", "lg:overflow-auto");
-          }
-        }
+        document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
+      } else {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.remove("hidden");
+        setTimeout(() => {
+          overlay.classList.remove("opacity-0");
+        }, 10);
+        hamburgerLines[0].classList.remove("-translate-y-2");
+        hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
+        hamburgerLines[1].classList.add("opacity-0");
+        hamburgerLines[2].classList.remove("translate-y-2");
+        hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
+        document.body.classList.add("overflow-hidden", "lg:overflow-auto");
+      }
+    }
 
-        hamburgerButton.addEventListener("click", toggleMenu);
-        overlay.addEventListener("click", toggleMenu);
+    hamburgerButton.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
 
-        // Close menu when clicking on links (for mobile)
-        const navLinks = navMenu.querySelectorAll("a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            if (window.innerWidth < 1024) {
-              toggleMenu();
-            }
-          });
-        });
-
-        // Handle window resize
-        window.addEventListener("resize", function () {
-          if (window.innerWidth >= 1024) {
-            // Reset everything when switching to desktop view
-            navMenu.classList.remove("hidden", "translate-x-full");
-            navMenu.classList.add("translate-x-0");
-            overlay.classList.add("hidden", "opacity-0");
-            
-            // Reset hamburger icon
-            hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
-            hamburgerLines[0].classList.add("-translate-y-2");
-            hamburgerLines[1].classList.remove("opacity-0");
-            hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
-            hamburgerLines[2].classList.add("translate-y-2");
-            
-            // Allow body to scroll
-            document.body.classList.remove("overflow-hidden");
-          } else {
-            // Make sure menu is hidden on mobile by default
-            if (!hamburgerButton.classList.contains("active")) {
-              navMenu.classList.add("translate-x-full");
-              navMenu.classList.remove("translate-x-0");
-              overlay.classList.add("hidden", "opacity-0");
-            }
-          }
-        });
-
-        // Initialize menu state based on screen size
-        if (window.innerWidth >= 1024) {
-          navMenu.classList.remove("hidden", "translate-x-full");
-          navMenu.classList.add("translate-x-0");
-        } else {
-          navMenu.classList.add("translate-x-full");
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        if (window.innerWidth < 1024) {
+          toggleMenu();
         }
       });
-    </script>
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.add("hidden", "opacity-0");
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+        hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+        hamburgerLines[2].classList.add("translate-y-2");
+        document.body.classList.remove("overflow-hidden");
+      } else {
+        if (!hamburgerButton.classList.contains("active")) {
+          navMenu.classList.add("translate-x-full");
+          navMenu.classList.remove("translate-x-0");
+          overlay.classList.add("hidden", "opacity-0");
+        }
+      }
+    });
+
+    if (window.innerWidth >= 1024) {
+      navMenu.classList.remove("hidden", "translate-x-full");
+      navMenu.classList.add("translate-x-0");
+    } else {
+      navMenu.classList.add("translate-x-full");
+    }
+  });
+</script>
   </body>
 </html>
