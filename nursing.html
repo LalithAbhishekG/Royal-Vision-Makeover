@@ -79,10 +79,20 @@
         </div>
       </ul>
     </nav>
-      <header
-      class="bg-cover md:bg-center  py-5 px-4 bg-fixed md:px-12 md:h-[750px]"
-      style="background-image: url('./img/nursingpics/nursingbg.png')"
-    >
+    <header
+  class="bg-cover bg-center py-5 px-4 bg-fixed md:px-12 md:h-[750px] h-[750px]"
+  style="background-image: url('./img/nursingpics/image.png');"
+>
+  <style>
+    @media (min-width: 768px) {       /* this is img for laptop view  */
+      header {
+        
+        background-image: url('./img/nursingpics/nursingbg.png') !important;
+      }
+    }
+  </style>
+
+
       <div class="w-full">
         <h2 class="md:text-[70px] text-[40px] text-center md:text-left font-bold text-white m-10 pt-[50px] pl-10 sm:m-0 md:m-0">Allied Health Training </h2>
 
