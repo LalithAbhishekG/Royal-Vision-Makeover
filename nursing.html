@@ -10,22 +10,25 @@
       href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link href="../path/to/src/pagedone.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              'abhaya': ['"Abhaya Libre"', 'serif'],
+              abhaya: ['"Abhaya Libre"', "serif"],
             },
             colors: {
-              'royal-maroon': '#3A0000',
-              'royal-gold': '#FFA62B',
-            }
+              "royal-maroon": "#3A0000",
+              "royal-gold": "#D6AF36",
+            },
           },
         },
-      }
+      };
     </script>
+
+    <script src="../path/to/src/pagedone.js"></script>
   </head>
   <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
     <!-- Navbar -->
@@ -75,101 +78,45 @@
         
       </ul>
     </nav>
+    <header
+  class="nursing-hero  bg-cover bg-center py-5 px-4 bg-fixed md:px-12 md:h-[750px] h-[750px]"
+  style="background-image: url('./img/nursingpics/image.png');"
+>
+  <style>
+    @media (min-width: 768px) {       /* this is img for laptop view  */
+      header {
+        
+        background-image: url('./img/nursingpics/nursingbg.png') !important;
+      }
+    }
+  </style>
 
-    <!-- Hero Section -->
-    <header class="hero__section  bg-cover  bg-fixed relative h-[70vh] sm:h-[80vh] md:h-[90vh] " style="background-image: url('./img/indeximg/Home\ BG.png')" >
-     
 
-      <div
-        class="hero__content absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-between items-center text-center  space-y-4"
-      >
-        <div class="hero__text w-full md:w-1/2  space-y-0">
-          <h1
-            class="hero__title font-abhaya mt-[80px] md:mt-[10px] font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
+      <div class="w-full">
+        <h2 class="nursing-hero__title md:text-[70px] text-[40px] text-center md:text-left font-bold text-white m-10 pt-[50px] md:pl-10 sm:m-0 md:m-0">Allied Health Training </h2>
+
+        <div class="nursing-hero__content flex flex-col md:flex-row gap-8 items-start">
+          <!-- Text box -->
+          <div
+            class="nursing-hero__text bg-black bg-opacity-70 text-white p-6 md:text-[24px] text-[18px] text-justify rounded-lg md:w-2/4"
           >
-            ROYAL
-          </h1>
-          <h1
-            class="hero__title font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
-          >
-            VISION
-          </h1>
-          <div class="hero__divider h-0.5 bg-white w-full max-w-[290px] md:max-w-[590px] mx-auto my-2"></div>
-          <p class="hero__tagline  font-abhaya text-xl md:text-base lg:text-[2.5rem] tracking-wider text-white normal-case pt-2 md:pt-5">
-          Institute Of Hotel Management
-          </p>
-          <!-- Chef image will appear here on mobile -->
-          <div class="hero__image-mobile md:hidden items-center m-5 mt-6 pt-[50px] ">
-            <img src="./svg/home photo.svg" alt="Chefs" />
+            <p class="mb-4">
+              With the onset of an incessant knowledge explosion in general, and in scientific medicine in particular, Mr.R.Girisan ,the chairman and founder of Royal Vision Allied health Training Institute, realized the great urgent need for reliable medical doctors who can be assisted by other healthcare professionals in the use of the various highly sophisticated instrumentation available for an early, prompt and specific diagnosis of disease, to design the different forms of therapy necessary and then to offer a convincing prognosis.</p>
+           
           </div>
-        </div>
-        <!-- Chef image will only appear here on tablet and larger screens -->
-        <div class="hero__image-desktop hidden w-[800px] h-[400px] md:block ">
-          <img src="./svg/home photo.svg" alt="Chefs" />
+
+          
         </div>
       </div>
-    </header>
+      </header>
 
-    <div
-      class="affiliation-banner text-center justify-center bg-black items-center text-white pt-2 pb-2"
-    >
-      <p>( Affiliated to BSS-NDA, Promoted by GOVT.OF India ) ISO 9001:2015</p>
-    </div>
-
-    <!-- About Section -->
-    <section class="about__section bg-[url('img/indeximg/Sect-3-background.png')] bg-cover bg-center items-center max-w-[100%]  lg:h-[800px] md:h-[800px] h-[1400px] flex flex-col justify-between md:gap-20 md:flex-row  ">
-      <div class="about__image h-[800px] w-full mb-0 md:mb-0">
-        <img src="./img/indeximg/image (3).png" alt="Chefs" class="about__img items-center m-0 md:w-[1600px] md:h-[800px]" />
-      </div>
-
-      <div
-        class="about__content w-full  text-justify md:m-0 pr-9 p-5 lg:pt-9 md:pt-9"
-      >
-        <h3
-          class="about__heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl lg:pt-9 md:pt-9 md:pr-10  font-extrabold text-[#3A0000] "
-        >
-          Welcome to Royal Vision Hotel Management and Allied health Training
-          Institute
-        </h3>
-        <p
-          class="about__text mt-2 text-[18px] sm:text-base  md:text-[21px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide md:pt-4 "
-        >
-          Royal Vision Institute of Hotel Management, a premier catering college
-          in Chennai, offers a pathway to a thriving career in Hotel Management,
-          a field that remains perpetually in demand. As the hospitality
-          industry continues to expand globally, skilled professionals are
-          essential to meet its evolving needs. We pride ourselves on providing
-          affordable education with exceptional quality, ensuring students
-          receive comprehensive training without financial burden.
-        </p>
-        <p
-          class="about__text mt-2 text-[18px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed md:pt-3 pb-5 "
-        >
-          Our programs emphasize practical education, offering hands-on
-          experience in hotel operations, food production, event management, and
-          more. With state-of-the-art facilities and expert faculty, we prepare
-          students to excel in leadership roles within this dynamic industry. At
-          Royal Vision, graduates are equipped to seize boundless opportunities
-          in a future-proof sector, making us the ideal choice for those seeking
-          excellence in hotel management.
-        </p>
-        <a href="./AboutUs.html">
-        <button
-       class="about__button text-[#FFAB36] font-extrabold text-2xl bg-[#3A0000] items-center w-full sm-full md:w-full lg:w-full mt-10 p-2 hover:bg-red-800 transition-colors duration-200 mb-5 "
-        >
-          More Information 
-        </button>
-        </a>
-      </div>
-
-    
-    </section>
+ </section>
     <div
       class="gallery-bar text-center justify-center bg-black items-center text-xl text-white pt-3 pb-3 mt-0"
     >
-      <p>Gallery</p>
+      <p>More Picture </p>
     </div>
-    <div class="RV-Gallery bg-black">
+<div class="RV-Gallery bg-black">
       <!-- Carousel Container -->
       <div class="gallery__carousel-container relative overflow-hidden rounded-lg shadow-xl">
         <!-- Carousel Track -->
@@ -308,7 +255,7 @@
           </div>
       </footer>
   
-         <script>
+    <script>
   document.addEventListener('DOMContentLoaded', function () {
     const images = [
       { src: './img/gallerypics/gallerypic1.jpg', alt: 'Image 1' },
@@ -434,7 +381,10 @@
 
 
 
-    <!-- JavaScript for modern hamburger menu functionality -->
+
+
+
+     <!-- JavaScript for modern hamburger menu functionality -->
    <script>
   document.addEventListener("DOMContentLoaded", function () {
     const hamburgerButton = document.getElementById("navbar__hamburger");

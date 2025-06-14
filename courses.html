@@ -20,12 +20,15 @@
             },
             colors: {
               'royal-maroon': '#3A0000',
-              'royal-gold': '#FFA62B',
+              'royal-gold': '#D6AF36',
             }
           },
         },
       }
     </script>
+    <style>
+
+</style>
   </head>
   <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
     <!-- Navbar -->
@@ -38,9 +41,9 @@
       <button id="navbar__hamburger" class="navbar__hamburger lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
         <div class="navbar__hamburger-icon relative flex flex-col justify-center items-center w-6 h-6">
           <!-- Hamburger bars with transitions -->
-          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
-          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-white h-0.5 w-6 rounded-sm absolute"></span>
         </div>
       </button>
 
@@ -49,149 +52,79 @@
       
       <ul
         id="navbar__menu"
-        class="navbar__menu hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-royal-maroon lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
+        class="navbar__menu hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-black lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
       >
         <li>
-          <a href="./index.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
+          <a href="./index.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
         </li>
         <li>
-          <a href="./AboutUs.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
+          <a href="./AboutUs.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
         </li>
         <li>
-          <a href="./courses.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
+          <a href="./courses.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
         </li>
         <li>
-          <a href="./contact.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
+          <a href="./contact.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
         </li>
         <li>
-          <a href="./Admissions.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
+          <a href="./Admissions.html" class="navbar__link block text-white hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
         </li>
           <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
-            <img src="./svg/whatsapp.svg" alt="whatsapp icon" class="navbar__icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] text-xl">Whatsapp</p>
+            <img src="./img/imgofcontactbg/whatsapp-svgrepo-com.svg" alt="whatsapp icon" class="navbar__icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-white text-xl">Whatsapp</p>
           </li>
           <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
-            <img src="./svg/insta.svg" alt="insta icon" class="navbar__icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] pl-2 text-xl">Instagram</p>
+            <img src="./img/imgofcontactbg/I gram.svg" alt="insta icon" class="navbar__icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-white pl-2 text-xl">Instagram</p>
           </li>
         
       </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero__section  bg-cover  bg-fixed relative h-[70vh] sm:h-[80vh] md:h-[90vh] " style="background-image: url('./img/indeximg/Home\ BG.png')" >
-     
 
-      <div
-        class="hero__content absolute inset-0 bg-black bg-opacity-60 flex flex-col md:flex-row justify-between items-center text-center  space-y-4"
-      >
-        <div class="hero__text w-full md:w-1/2  space-y-0">
-          <h1
-            class="hero__title font-abhaya mt-[80px] md:mt-[10px] font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
-          >
-            ROYAL
-          </h1>
-          <h1
-            class="hero__title font-abhaya font-extrabold [filter:drop-shadow(6px_1px_0px_#d90b0b)] text-8xl md:text-8xl lg:text-15xl xl:text-[12rem] bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text"
-          >
-            VISION
-          </h1>
-          <div class="hero__divider h-0.5 bg-white w-full max-w-[290px] md:max-w-[590px] mx-auto my-2"></div>
-          <p class="hero__tagline  font-abhaya text-xl md:text-base lg:text-[2.5rem] tracking-wider text-white normal-case pt-2 md:pt-5">
-          Institute Of Hotel Management
-          </p>
-          <!-- Chef image will appear here on mobile -->
-          <div class="hero__image-mobile md:hidden items-center m-5 mt-6 pt-[50px] ">
-            <img src="./svg/home photo.svg" alt="Chefs" />
+    <header
+      class="courses-hero bg-cover bg-center py-16 px-4 md:px-12   md:h-[900px]"
+      style="background-image: url('./img/coursespics/image\ 7.png')"
+    >
+      <div class="courses-hero__container w-full flex flex-col md:flex-row gap-8 justify-center items-center " >
+          <!-- Hotel Management Card -->
+          <div class="courses-card flex flex-col   items-center md:w-1/3">
+            <div class="courses-card__img-wrapper bg-white p-2 rounded-xl shadow-xl ">
+              <img
+                src="./img/coursespics/image (2).png"
+                alt="hotelManagement"
+                id="hotelManagement"
+                class="courses-card__img rounded-lg items-center"
+              />
+            </div>
+            <div
+              class="courses-card__title bg-[#FFC471] text-brown-900 text-center md:text-3xl text-xl  px-[100px] py-2 rounded-lg mt-5 shadow-md"
+            >
+              Diploma in Hotel<br> Management
+            </div>
           </div>
-        </div>
-        <!-- Chef image will only appear here on tablet and larger screens -->
-        <div class="hero__image-desktop hidden w-[800px] h-[400px] md:block ">
-          <img src="./svg/home photo.svg" alt="Chefs" />
-        </div>
+
+          <!-- Nursing Card -->
+          <div class="courses-card flex flex-col items-center md:w-1/3">
+            <div class="courses-card__img-wrapper bg-white p-2 rounded-xl shadow-xl">
+              <img
+                src="./img/coursespics/image 8.png"
+                alt="Nursing"
+                id="Nursing"
+                class="courses-card__img rounded-lg items-center"
+              />
+            </div>
+            <div
+              class="courses-card__title bg-[#FFC471] text-brown-900  md:text-3xl text-xl text-center px-[90px] py-2 rounded-lg mt-5 shadow-md"
+            >
+              Diploma in Nursing <br> Assistant
+            </div>
+          </div>
       </div>
-    </header>
-
-    <div
-      class="affiliation-banner text-center justify-center bg-black items-center text-white pt-2 pb-2"
-    >
-      <p>( Affiliated to BSS-NDA, Promoted by GOVT.OF India ) ISO 9001:2015</p>
-    </div>
-
-    <!-- About Section -->
-    <section class="about__section bg-[url('img/indeximg/Sect-3-background.png')] bg-cover bg-center items-center max-w-[100%]  lg:h-[800px] md:h-[800px] h-[1400px] flex flex-col justify-between md:gap-20 md:flex-row  ">
-      <div class="about__image h-[800px] w-full mb-0 md:mb-0">
-        <img src="./img/indeximg/image (3).png" alt="Chefs" class="about__img items-center m-0 md:w-[1600px] md:h-[800px]" />
-      </div>
-
-      <div
-        class="about__content w-full  text-justify md:m-0 pr-9 p-5 lg:pt-9 md:pt-9"
-      >
-        <h3
-          class="about__heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl lg:pt-9 md:pt-9 md:pr-10  font-extrabold text-[#3A0000] "
-        >
-          Welcome to Royal Vision Hotel Management and Allied health Training
-          Institute
-        </h3>
-        <p
-          class="about__text mt-2 text-[18px] sm:text-base  md:text-[21px]  xl:text-[21px] font-extrabold leading-relaxed tracking-wide md:pt-4 "
-        >
-          Royal Vision Institute of Hotel Management, a premier catering college
-          in Chennai, offers a pathway to a thriving career in Hotel Management,
-          a field that remains perpetually in demand. As the hospitality
-          industry continues to expand globally, skilled professionals are
-          essential to meet its evolving needs. We pride ourselves on providing
-          affordable education with exceptional quality, ensuring students
-          receive comprehensive training without financial burden.
-        </p>
-        <p
-          class="about__text mt-2 text-[18px] md:text-[20px] sm:text-base xl:text-[21px] font-extrabold leading-relaxed md:pt-3 pb-5 "
-        >
-          Our programs emphasize practical education, offering hands-on
-          experience in hotel operations, food production, event management, and
-          more. With state-of-the-art facilities and expert faculty, we prepare
-          students to excel in leadership roles within this dynamic industry. At
-          Royal Vision, graduates are equipped to seize boundless opportunities
-          in a future-proof sector, making us the ideal choice for those seeking
-          excellence in hotel management.
-        </p>
-        <a href="./AboutUs.html">
-        <button
-       class="about__button text-[#FFAB36] font-extrabold text-2xl bg-[#3A0000] items-center w-full sm-full md:w-full lg:w-full mt-10 p-2 hover:bg-red-800 transition-colors duration-200 mb-5 "
-        >
-          More Information 
-        </button>
-        </a>
-      </div>
-
-    
-    </section>
-    <div
-      class="gallery-bar text-center justify-center bg-black items-center text-xl text-white pt-3 pb-3 mt-0"
-    >
-      <p>Gallery</p>
-    </div>
-    <div class="RV-Gallery bg-black">
-      <!-- Carousel Container -->
-      <div class="gallery__carousel-container relative overflow-hidden rounded-lg shadow-xl">
-        <!-- Carousel Track -->
-        <div id="carousel-track" class="gallery__track flex transition-transform duration-300 ease-in-out">
-          <!-- Slides will be inserted here by JavaScript -->
-        </div>
         
-        <!-- Navigation Buttons -->
-        <button id="prevBtn" class="gallery__button absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <button id="nextBtn" class="gallery__button absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-    </div>
-      
-      <!-- Tagline and Contact Banner -->
+      </header>
+
+
+
+         <!-- Tagline and Contact Banner -->
       <div class="contact-banner flex items-stretch text-[#3B0100] font-semibold text-lg bg-[#FBC171] border-y-[10px] border-[#3B0100]">
         <!-- Left Section -->
         <div class="contact-banner__left w-3/4 flex items-center justify-center rounded-bl-lg px-2 py-2">
@@ -308,132 +241,8 @@
           </div>
       </footer>
   
-         <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const images = [
-      { src: './img/gallerypics/gallerypic1.jpg', alt: 'Image 1' },
-      { src: './img/gallerypics/gallerypic2.jpg', alt: 'Image 2' },
-      { src: './img/gallerypics/gallerypic3.jpg', alt: 'Image 3' },
-      { src: './img/gallerypics/gallerypic4.jpg', alt: 'Image 4' },
-      { src: './img/gallerypics/gallerypic5.jpg', alt: 'Image 5' },
-      { src: './img/gallerypics/gallerypic6.jpg', alt: 'Image 6' },
-      { src: './img/gallerypics/gallerypic7.jpg', alt: 'Image 7' },
-    ];
 
-    const carouselTrack = document.getElementById('carousel-track');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    let currentIndex = 0;
-    let visibleCount = getVisibleCount();
-    let interval;
-
-    function getVisibleCount() {
-      const width = window.innerWidth;
-      if (width < 640) return 1;
-      if (width < 768) return 2;
-      if (width < 1024) return 3;
-      return 5;
-    }
-
-    function getWidthClass(count) {
-      switch (count) {
-        case 1: return 'min-w-full';
-        case 2: return 'min-w-1/2';
-        case 3: return 'min-w-1/3';
-        case 5: return 'min-w-[20%]'; // 1/5 is not in Tailwind default, use custom or inline style
-        default: return 'min-w-full';
-      }
-    }
-
-    function initCarousel() {
-      if (!carouselTrack) return;
-      carouselTrack.innerHTML = '';
-
-      const widthClass = getWidthClass(visibleCount);
-
-      images.forEach((image) => {
-        const slide = document.createElement('div');
-        slide.className = `${widthClass} p-1 flex-shrink-0`;
-        slide.innerHTML = `
-          <img src="${image.src}" alt="${image.alt}" class="w-full h-48 object-cover rounded-lg" 
-            onerror="this.onerror=null; this.src='./img/placeholder.jpg'; this.alt='Image not available'">
-        `;
-        carouselTrack.appendChild(slide);
-      });
-
-      startAutoSlide();
-      updateCarousel();
-    }
-
-    function updateCarousel() {
-      if (!carouselTrack) return;
-      const slideWidth = 100 / visibleCount;
-      carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-      carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-      resetAutoSlide();
-    }
-
-    function nextSlide() {
-      if (!carouselTrack) return;
-      if (currentIndex < images.length - visibleCount) {
-        currentIndex++;
-      } else {
-        currentIndex = 0;
-      }
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      if (!carouselTrack) return;
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = Math.max(images.length - visibleCount, 0);
-      }
-      updateCarousel();
-    }
-
-    function startAutoSlide() {
-      if (interval) clearInterval(interval);
-      interval = setInterval(nextSlide, 5000);
-    }
-
-    function resetAutoSlide() {
-      if (interval) clearInterval(interval);
-      startAutoSlide();
-    }
-
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-
-    if (carouselTrack) {
-      carouselTrack.addEventListener('mouseenter', () => clearInterval(interval));
-      carouselTrack.addEventListener('mouseleave', startAutoSlide);
-    }
-
-    window.addEventListener('resize', () => {
-      visibleCount = getVisibleCount();
-      currentIndex = 0;
-      initCarousel();
-    });
-
-    initCarousel();
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
     <!-- JavaScript for modern hamburger menu functionality -->
    <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -517,5 +326,34 @@
     }
   });
 </script>
+
+
+
+<script>
+  const nursingImg = document.getElementById("Nursing");
+
+  nursingImg.addEventListener("click", () => {
+    window.location.href = "nursing.html";
+  });
+
+  
+  const hotelManagement = document.getElementById("hotelManagement");
+
+  hotelManagement.addEventListener("click", () => {
+    window.location.href = "Hotel_Management.html";
+  });
+
+
+
+  
+</script>
+
+
+
+
+
+
+
+
   </body>
 </html>

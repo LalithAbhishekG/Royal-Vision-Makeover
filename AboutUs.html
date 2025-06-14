@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../path/to/src/pagedone.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              abhaya: ['"Abhaya Libre"', "serif"],
+            },
+            colors: {
+              "royal-maroon": "#3A0000",
+              "royal-gold": "#D6AF36",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="../path/to/src/pagedone.js"></script>
+  </head>
+  <body class="font-abhaya font-extrabold normal-case bg-gray-100 pt-16">
+    <!-- Navbar -->
+    <nav
+      class="navbar_main bg-royal-maroon text-[#3A0000] py-4 px-5 flex justify-between items-center fixed top-0 left-0 right-0 w-full z-50 shadow-lg"
+    >
+      <h1 class="nav__logo text-2xl text-white font-bold">LOGO</h1>
+
+      <!-- Hamburger Menu Button (visible on mobile) -->
+      <button id="navbar__hamburger" class="navbar__hamburger lg:hidden focus:outline-none relative z-50 w-10 h-10 flex items-center justify-center group">
+        <div class="navbar__hamburger-icon relative flex flex-col justify-center items-center w-6 h-6">
+          <!-- Hamburger bars with transitions -->
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+          <span class="navbar__hamburger-line transform transition-all duration-300 ease-in-out bg-[#FFA62B] h-0.5 w-6 rounded-sm absolute"></span>
+        </div>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div id="navbar__overlay" class="navbar__overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 ease-in-out opacity-0"></div>
+      
+      <ul
+        id="navbar__menu"
+        class="navbar__menu hidden lg:flex lg:space-x-6 items-center flex-col lg:flex-row fixed lg:static top-0 right-0 h-full lg:h-auto w-64 lg:w-auto z-40 bg-royal-maroon lg:bg-transparent shadow-xl lg:shadow-none transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-8 pt-20 lg:p-0 space-y-6 lg:space-y-0"
+      >
+        <li>
+          <a href="./index.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Home</a>
+        </li>
+        <li>
+          <a href="./AboutUs.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">About Us</a>
+        </li>
+        <li>
+          <a href="./courses.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Courses</a>
+        </li>
+        <li>
+          <a href="./contact.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Contact Us</a>
+        </li>
+        <li>
+          <a href="./Admissions.html" class="navbar__link block text-[#FFA62B] hover:text-yellow-300 text-xl lg:text-base transition duration-200 ease-in-out transform hover:translate-x-1 lg:hover:translate-x-0">Admissions</a>
+        </li>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./svg/whatsapp.svg" alt="whatsapp icon" class="navbar__icon w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] text-xl">Whatsapp</p>
+          </li>
+          <li class="navbar__socials flex space-x-4 mt-6 lg:mt-0">
+            <img src="./svg/insta.svg" alt="insta icon" class="navbar__icon w-6 h-7 cursor-pointer hover:opacity-80 transition-opacity"/><p class="md:hidden text-[#FFA62B] pl-2 text-xl">Instagram</p>
+          </li>
+        
+      </ul>
+    </nav>
+
+      <header
+      class="about-hero  bg-cover bg-fixed bg-center py-16 md:py-8 px-4 md:px-12  text-justify md:h-[900px]"
+      style="background-image: url('./img/Aboutuspics/Main-sec-bg.png')"
+    >
+      <div class="about-hero__container w-full">
+        <h2 class="about-hero__title text-[50px] font-bold text-white m-8 sm:m-0 md:m-9">OUR VISION</h2>
+
+        <div class="about-hero__content flex flex-col md:flex-row gap-8 items-start">
+          <!-- Text box -->
+          <div
+            class="about-hero__text bg-[#220000] bg-opacity-70 text-white p-6 md:text-[24px] text-[16px]   md:w-3/5"
+          >
+            <p class="mb-4">
+              Royal Vision Institute of Hotel Management, a premier catering
+              college in Chennai, offers a pathway to a thriving career in Hotel
+              Management , a field that remains perpetually in demand. As the
+              hospitality industry continues to expand globally, skilled
+              professionals are essential to meet its evolving needs. We pride
+              ourselves on providing affordable education with exceptional
+              quality , ensuring students receive comprehensive training without
+              financial burden.
+            </p>
+            <p>
+              Our programs emphasize practical education , offering hands-on
+              experience in hotel operations, food production, event management,
+              and more. With state-of-the-art facilities and expert faculty, we
+              prepare students to excel in leadership roles within this dynamic
+              industry. At Royal Vision, graduates are equipped to seize
+              boundless opportunities in a future-proof sector , making us the
+              ideal choice for those seeking excellence in hotel management.
+            </p>
+          </div>
+
+          <!-- Chairman Card -->
+          <div class="about-hero__chairman-card flex flex-col items-center w-full md:w-1/3">
+            <div class="bg-white p-2 rounded-xl shadow-xl w-[250px]">
+              <img
+                src="./img/Aboutuspics/image 5.png"
+                alt="Chairman"
+                class="about-hero__chairman-img rounded-lg items-center"
+              />
+            </div>
+            
+            <div
+              class="about-hero__chairman-title bg-[#FFC471] text-brown-900 font-bold md:text-2xl px-9 md:px-[70px] py-3 rounded-lg -mt-4 shadow-md"
+            >
+              Chair Man - Girisan R
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+
+    <section class="about-journey w-full bg-black py-10 ">
+  <h2 class="about-journey__title text-[50px] text-center font-bold text-white mb-12">OUR JOURNEY</h2>
+
+  <div class="relative bg-fixed bg-cover bg-center px-4 md:px-12 h-[1000px]" style="background-image: url('./img/Aboutuspics/Sect-2 BG.png');">
+    <div class=" absolute left-1/2 top-0 h-full w-1 bg-white transform -translate-x-1/2"></div>
+
+    <!-- Timeline Items -->
+    <div style="font-family: 'Outfit', sans-serif;" class="flex flex-col justify-between h-full py-10 space-y-20">
+      
+      <!-- 2015 LEFT -->
+      <div class="about-journey__item flex items-center justify-start w-full  relative">
+        <div class="w-1/2 pr-10 text-right">
+          <div class="bg-[#4B0F0F] text-white p-6 rounded-lg shadow-lg inline-block">
+            <h3 class="about-journey__year  text-[36px] text-[#FFA62B] font-bold text-center mb-2">2015</h3>
+            <p class="about-journey__desc text-center  text-[#FFA62B] font-[18px] ">Royal Vision Institute Of Hotel <br> Management Founded</p>
+          </div>
+        </div>
+        <div class="w-1 absolute left-1/2 transform -translate-x-1/2 bg-orange-500 h-5 w-5 rounded-full z-10 border-4 border-white"></div>
+        <div class="w-1/2"></div>
+      </div>
+
+      <!-- 2017 RIGHT -->
+      <div class="about-journey__item flex items-center justify-end w-full relative">
+        <div class="w-1/2"></div>
+        <div class="w-1 absolute left-1/2 transform -translate-x-1/2 bg-orange-500 h-5 w-5 rounded-full z-10 border-4 border-white"></div>
+        <div class="w-1/2 pl-10 text-left">
+          <div class="bg-[#4B0F0F] text-white p-6 rounded-lg shadow-lg inline-block">
+            <h3 class="about-journey__year  text-[36px] text-center  text-[#FFA62B] font-bold mb-2">2017</h3>
+             <p class="about-journey__desc text-center text-[#FFA62B]  font-[18px]">Royal Vision Institute Of Allied <br>Health Training</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 LEFT -->
+      <div class="about-journey__item flex items-center justify-start w-full relative">
+        <div class="w-1/2  pr-10 text-right ">
+          <div class="bg-[#4B0F0F] text-white p-6 rounded-lg shadow-lg inline-block">
+            <h3 class="about-journey__year  text-[36px] text-[#FFA62B] text-center  font-bold mb-2">2020</h3>
+             <p class="about-journey__desc text-center text-[#FFA62B]  font-[18px]">Launched Telemedicine <br> Consultations, Ensuring Continuous <br>Healthcare Access During Global  <br> Challenges.</p>
+          </div>
+        </div>
+        <div class="w-1 absolute left-1/2 transform -translate-x-1/2 bg-orange-500 h-5 w-5 rounded-full z-10 border-4 border-white"></div>
+        <div class="w-1/2"></div>
+      </div>
+  
+
+    </div>
+  </div>
+    </section>
+  
+
+<section class="faq-section py-24    bg-fixed bg-center  bg-cover bg-opacity-50" style="background-image: url('./img/Aboutuspics/Sect-3-bg.png')">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-16">
+      <h2 class="faq-section__title text-7xl font-manrope text-center font-bold text-[#3A0000] leading-[3.25rem]">
+        FAQ
+      </h2>
+    </div>
+
+    <div class="space-y-6">
+  
+      <div class="faq-list space-y-6 m-2" id="initial-faqs">
+       
+        <div class="faq1 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between  items-center text-left md:text-2xl text-xl font-normal rounded-t-lg text-gray-900">
+            <h5>1 . What is the basic Qualification to Join a Course in Royal Vision Hotel Management?</h5>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+            8th Pass for Certificate Courses / 10th Pass or Fail for Diploma courses / 12th Pass for Degree Courses
+          </div>
+        </div>
+        <div class="faq2 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>2. Why should I join in Royal Vision Hotel Management when there are so many other institute ?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+           We are the only institute having lowest fee structure with free uniform, good infrastructure ( All lab facilities, smartclasses) and individual food production session.
+          </div>
+        </div>
+       
+        <div class="faq3 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-leftmd:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>3. What are the practicals conducted in Royal Vision Hotel Management</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+           At Royal Vision Hotel Management we conduct weekly two demo practicals and two time students individual practicals in Food & Beverage production .Also we conduct Food &Beverage service Practical and House Keeping practicals twice a week.
+          </div>
+        </div>
+        <div class="faq4 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4  flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>4. What will be my monthly income after finishing this course?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+          You can earn starting from Rs 10,000/- to RS 22,000/- (Including Service Charge &Tips) also you can Earn RS 40,000/- to RS 1, 00,000/- per month when you go Abroad
+          </div>
+        </div>
+        <div class="faq5 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>5. What Kind of Support I get when I study at Royal Vision Hotel Management?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+            Royal Vision Hotel Management will Support you by providing Part-Time Job, Installments Fees, On-Job Training, Lifetime Placements, Campus Interviews, and English improvement Classes, etc.
+          </div>
+        </div>
+        <div class="faq6 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal  rounded-t-lg  text-gray-900">
+            <h5>6. I will be leaving to abroad shortly for my higher studies? If I do any short term Course in Royal Vision Hotel Management before leaving is that useful for me?</h5>
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-9 opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+            In abroad there are plenty of Restaurants, Coffee Shops, and Hotels. Sure! you will get a part time job, if you do a short course and have a Certificate from Royal Vision Hotel Management.
+        </div>
+
+        </div>
+        <div class="faq7 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg  text-gray-900">
+            <h5>7. I haven't done any Hotel Management Course, but at present working in a Hotel, Which way this Course going to support me?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+           Good, you have a Hotel experience. But ,if you do a course and get a certificate from Royal vision hotel management., it will give you much better opportunities and promotions in other good organization and abroad.
+        </div>
+      </div>
+
+      <!-- More FAQs hidden initially -->
+      <div id="more-faqs" class="space-y-6 hidden">
+        <!-- FAQs 8 to 18 -->
+      
+        <div class="faq8 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl   rounded-t-lg font-normal text-gray-900">
+            <h5>8. My parent wants to pay my fees in bank directly in my native place. Is that possible?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+           Yes it is possible, Your Parents can Pay the Fees directly in the Bank in your Native Place.
+          </div>
+        </div>
+
+
+         <div class="faq9  ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal  rounded-t-lg text-gray-900">
+            <h5>9. Do you give free uniform? What else will I get?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+           Yes, Royal Vision Hotel Management provides Rs 5,500 worth free Uniform, ( White Shirt, Black Pant, Chef Coat, Chef Pant, Chef Cap, Apron, Scarf, Knife Set, Record Notes, ).
+          </div>
+        </div>
+
+         <div class="faq10 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>10. Is that possible to pay my fees by installment?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg leading-6 rounded-b-lg ">
+           Yes, Royal Vision Hotel Management Institute has a special option for the student to pay their fees in EMI [Equated Monthly Installments].
+          </div>
+        </div>
+
+         <div class="faq11 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>11. Do you provide placement after I complete my course?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+      Royal Vision Hotel Management Provides Job Placements to all of it's Student not only for One-Time but until they get a suitable Job to advance the Career.
+          </div>
+        </div>
+
+         <div class="faq12 ">
+          <button class="accordion-toggle w-full  bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg  text-gray-900">
+            <h5>12. Do you provide industrial training & on-job training?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+         Yes Royal Vision Hotel Management provides Industrial Training and on job Training .
+          </div>
+        </div>
+
+         <div class="faq13 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>13. What is the joining procedure and What is the cost of application?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+         Meet our Admission coordinator in our institute. He/She well help you regarding this.Cost of application is Rs 50.
+          </div>
+        </div>
+
+         <div class="faq14 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>14. Is there any scholarship available?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+            Yes, Scholarship is available in Royal Vision Hotel Management.(t&c apply)
+          </div>
+        </div>
+
+         <div class="faq15 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>15. Do you have any Internship training programme in abroad?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+           Yes, We have internship training programme for our students in Malaysia for six months.
+          </div>
+        </div>
+
+         <div class="faq16 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>16. In abroad internship training programme whether food and accommodation is free or chargeable?</h5>
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+            No, the food and accommodation is free during the time of training.
+          </div>
+        </div>
+
+         <div class="faq17">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal  rounded-t-lg text-gray-900">
+            <h5>17. How much I have to pay for the internship training in malaysia?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+           Just, you have to pay VISA fees, Medical fees and ticket cost.
+          </div>
+        </div>
+
+
+        <div class="faq18 ">
+          <button class="accordion-toggle w-full bg-[#FFC471] p-4 flex justify-between items-center text-left md:text-2xl text-xl  font-normal rounded-t-lg text-gray-900">
+            <h5>18. There is any salary for us in the training?</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7  opacity-80" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+          </button>
+          <div class="accordion-content hidden  p-4 text-white bg-[#3A0000] md:text-xl text-lg  leading-6 rounded-b-lg ">
+          Yes, You will get good salary every month and you can easily get back the amount you have paid for the internship.
+          </div>
+        </div>
+      </div>
+
+      <!-- Show More / Show Less Buttons -->
+      <div class="text-center mt-6">
+        <button id="show-more-btn" class="bg-[#3A0000] text-white px-6 py-2 rounded-lg text-lg hover:bg-[#5a1a1a]">
+          Show More FAQs
+        </button>
+        <button id="show-less-btn" class="bg-[#3A0000] text-white px-6 py-2 rounded-lg text-lg hover:bg-[#5a1a1a] hidden">
+          Show Less FAQs
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Tagline and Contact Banner -->
+      <div class="contact-banner flex items-stretch text-[#3B0100] font-semibold text-lg bg-[#FBC171] border-y-[10px] border-[#3B0100]">
+        <!-- Left Section -->
+        <div class="contact-banner__left w-3/4 flex items-center justify-center rounded-bl-lg px-2 py-2">
+          <p>"Just step in as a Novice and Step out as an expert"</p>
+        </div>
+      
+        
+      
+        <!-- Right Section -->
+        <div class="contact-banner__right flex flex-col items-center justify-center px-2 py-2">
+          <p class="contact-banner__title text-xl">For Admission Contact</p>
+          <p class="contact-banner__phone text-2xl font-bold">7448 500 500</p>
+        </div>
+      </div>
+      
+      
+
+  <!-- Map and Contact Info -->
+<div class="contact-section bg-[#3A0000] p-4 md:pb-8  ">
+  <div class="flex flex-col md:flex-row gap-6 md:gap-8 max-w-7xl mx-auto border-4 border-royal-gold/30 rounded-xl p-3 shadow-[0_0_15px_rgba(214,175,54,0.3)] relative">
+      <!-- Decorative corner elements -->
+      <div class="contact-section__decor absolute -top-2 -left-2 w-4 h-4 border-t-4 border-l-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -top-2 -right-2 w-4 h-4 border-t-4 border-r-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -bottom-2 -left-2 w-4 h-4 border-b-4 border-l-4 border-royal-gold/50"></div>
+      <div class="contact-section__decor absolute -bottom-2 -right-2 w-4 h-4 border-b-4 border-r-4 border-royal-gold/50"></div>
+
+      <!-- Map Section -->
+      <div class="contact-section__map w-full md:w-1/3 bg-[#3A0000] rounded-lg overflow-hidden shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15561.397769652067!2d79.962849!3d13.1258834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528fa815854655%3A0x1d7293543fcc0d27!2sRoyal%20Vision%20Institute%20of%20Hotel%20Management%20Allied%20Health%20Training%20Institute!5e0!3m2!1sen!2sin!4v1714997368363!5m2!1sen!2sin" 
+              width="100%"  
+              height="320" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full">
+          </iframe>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-section__info max-w-8xl md:flex flex-row gap-4">
+          <!-- Address -->
+          <div class="contact-section__address bg-[#3A0000]  rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+            <div class="border-b-2 border-royal-gold/30 pb-3 mb-3">
+              <p class="contact-section__address-title text-xl  font-bold text-[#FBC171] text-center flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                Where We Are
+              </p>
+            </div>
+            <p class="contact-section__address-text text-base text-[#FBC171] text-center leading-relaxed">  
+                No.3/325, Vigneswar Nagar,<br>
+                Sevvapet, Tirur Post,
+                Thiruvallur Dist,<br>
+                TamilNadu,India - 602025.
+                <span class="block mt-1 text-[#FBC171]  font-semibold text-sm">(Near Sevvapet Railway Station)</span>
+            </p>
+          </div>
+
+          <!-- Phone & mail -->
+          <div class="contact-section__phone-mail bg-[#3A0000] rounded-lg p-5 shadow-[0_0_10px_rgba(214,175,54,0.2)] border-2 border-royal-gold/20 hover:border-royal-gold/40 hover:shadow-[0_0_15px_rgba(214,175,54,0.3)] transition-all duration-300">
+            <div class="border-b-2 border-royal-gold/30 pb-3 mb-3">
+              <p class="text-xl font-bold text-[#FBC171] text-center flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                Contact Details
+              </p>
+            </div>
+            <div class="md:flex  m-0 gap-9">
+              <div class="contact-section__phone border-l-2 border-royal-gold/20 pl-4">
+                <p class=" text-base font-semibold text-[#FBC171] mb-2 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  Mobile Numbers
+                </p>
+                <p class="text-md text-[#FBC171] pl-7">              
+                    7448 500 500 <br>
+                    9444 74 3665<br>
+                    733 908 7776 <br>
+                    733 909 7776
+                </p>
+              </div>
+              <div class="contact-section__email border-l-2 border-royal-gold/20 pl-4">
+                <p class="text-base font-semibold text-[#FBC171] mb-2 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-royal-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  Email Addresses
+                </p>
+                <p class="text-md text-[#FBC171] leading-relaxed pl-7">
+                    savithagiri@gmail.com<br>
+                    royalvision.ihm@gmail.com
+                </p>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+      
+      <!-- Footer -->
+      <footer class="rv__footer  bg-black text-white py-4 px-6">
+          <div class="container mx-auto text-center">
+              <p class="text-sm">Copyright © 2019 Royal Vision Hotel Management and Allied health Training Institute. All Rights Reserved. Designed by RVHM</p>
+          </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript for "+" button -->
+
+<script>
+  // Accordion logic
+  document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+
+      // Close others
+      document.querySelectorAll('.accordion-content').forEach(c => {
+        if (c !== content) c.classList.add('hidden');
+      });
+      document.querySelectorAll('.icon').forEach(i => {
+        if (i !== icon) i.textContent = '+';
+      });
+
+      // Toggle current
+      content.classList.toggle('hidden');
+      icon.textContent = content.classList.contains('hidden') ? '+' : '–';
+    });
+  });
+
+  // Show more / less logic
+  const moreFaqs = document.getElementById('more-faqs');
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const showLessBtn = document.getElementById('show-less-btn');
+
+  showMoreBtn.addEventListener('click', () => {
+    moreFaqs.classList.remove('hidden');
+    showMoreBtn.classList.add('hidden');
+    showLessBtn.classList.remove('hidden');
+  });
+
+  showLessBtn.addEventListener('click', () => {
+    moreFaqs.classList.add('hidden');
+    showLessBtn.classList.add('hidden');
+    showMoreBtn.classList.remove('hidden');
+
+    // Optionally collapse all open answers
+    document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.icon').forEach(i => i.textContent = '+');
+  });
+</script>
+
+
+                                            
+
+
+
+ <!-- JavaScript for modern hamburger menu functionality -->
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerButton = document.getElementById("navbar__hamburger");
+    const navMenu = document.getElementById("navbar__menu");
+    const overlay = document.getElementById("navbar__overlay");
+    const hamburgerLines = document.querySelectorAll(".navbar__hamburger-line");
+    
+    // Position the hamburger lines initially
+    hamburgerLines[0].classList.add("-translate-y-2");
+    hamburgerLines[2].classList.add("translate-y-2");
+    
+    function toggleMenu() {
+      const isOpen = navMenu.classList.contains("translate-x-0");
+      if (isOpen) {
+        navMenu.classList.remove("translate-x-0");
+        navMenu.classList.add("translate-x-full");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+        }, 300);
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+        hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+        hamburgerLines[2].classList.add("translate-y-2");
+        document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
+      } else {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.remove("hidden");
+        setTimeout(() => {
+          overlay.classList.remove("opacity-0");
+        }, 10);
+        hamburgerLines[0].classList.remove("-translate-y-2");
+        hamburgerLines[0].classList.add("rotate-45", "translate-y-0");
+        hamburgerLines[1].classList.add("opacity-0");
+        hamburgerLines[2].classList.remove("translate-y-2");
+        hamburgerLines[2].classList.add("-rotate-45", "translate-y-0");
+        document.body.classList.add("overflow-hidden", "lg:overflow-auto");
+      }
+    }
+
+    hamburgerButton.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
+
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        if (window.innerWidth < 1024) {
+          toggleMenu();
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) {
+        navMenu.classList.remove("hidden", "translate-x-full");
+        navMenu.classList.add("translate-x-0");
+        overlay.classList.add("hidden", "opacity-0");
+        hamburgerLines[0].classList.remove("rotate-45", "translate-y-0");
+        hamburgerLines[0].classList.add("-translate-y-2");
+        hamburgerLines[1].classList.remove("opacity-0");
+        hamburgerLines[2].classList.remove("-rotate-45", "translate-y-0");
+        hamburgerLines[2].classList.add("translate-y-2");
+        document.body.classList.remove("overflow-hidden");
+      } else {
+        if (!hamburgerButton.classList.contains("active")) {
+          navMenu.classList.add("translate-x-full");
+          navMenu.classList.remove("translate-x-0");
+          overlay.classList.add("hidden", "opacity-0");
+        }
+      }
+    });
+
+    if (window.innerWidth >= 1024) {
+      navMenu.classList.remove("hidden", "translate-x-full");
+      navMenu.classList.add("translate-x-0");
+    } else {
+      navMenu.classList.add("translate-x-full");
+    }
+  });
+</script>
+  </body>
+</html>
